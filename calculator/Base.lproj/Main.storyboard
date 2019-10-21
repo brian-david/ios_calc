@@ -33,6 +33,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yws-LN-kNb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPr-mh-uK4" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="86" y="0.0" width="77.5" height="68"/>
@@ -46,6 +49,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLv-fO-SO2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyl-HB-Ko6" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="171.5" y="0.0" width="78" height="68"/>
@@ -59,6 +65,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBM-nl-IRJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-j5-S26" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="77.5" height="68"/>
@@ -73,6 +82,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CwM-cd-Xg7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -92,7 +104,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNm-0c-zbP"/>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bus-GG-hw9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovs-Bc-bRW" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
@@ -127,7 +139,7 @@
                                                     <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqm-d3-wBT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIR-o4-in3" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIR-o4-in3" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="77.5" height="67.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -140,6 +152,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operands:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmW-TP-VYg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="m5d-Wn-Z3J"/>
@@ -195,7 +210,7 @@
                                                     <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rca-WD-OBa"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rms-ez-b09" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rms-ez-b09" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="77.5" height="68"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -207,6 +222,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operands:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUo-sK-f5o"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -261,7 +279,7 @@
                                                     <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygg-RG-Hf6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-eZ-XiI" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-eZ-XiI" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="77.5" height="68"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -273,6 +291,9 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operands:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VEp-Ps-fQU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -324,10 +345,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYR-hZ-cbu"/>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyL-wa-sZ8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3P-EO-poq" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3P-EO-poq" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="77.5" height="67.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="minus" catalog="system">
@@ -338,13 +359,17 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSd-oE-tOA"/>
+                                                    <action selector="operands:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WbU-bw-gm9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKU-H1-lIp">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="JKU-H1-lIp">
                                         <rect key="frame" x="0.0" y="379" width="335" height="68"/>
                                         <subviews>
-                                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TY5-6Q-aTU" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TY5-6Q-aTU" customClass="RoundButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="68"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="equal" catalog="system">
@@ -355,6 +380,10 @@
                                                         <real key="value" value="32"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2i0-IU-pcm"/>
+                                                    <action selector="operands:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwj-bO-Ntr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -363,12 +392,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb1-sG-eAe">
                                 <rect key="frame" x="20" y="120" width="335" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-FO-SpL">
+                                <rect key="frame" x="16" y="76" width="339" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gcn-N7-X8O" secondAttribute="trailing" constant="20" id="FIP-3y-kAs"/>
                             <constraint firstItem="Gcn-N7-X8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Ntg-pa-Z2X"/>
@@ -378,12 +414,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ansLbl" destination="Lb1-sG-eAe" id="eHG-R4-mPB"/>
+                        <outlet property="ansLbl" destination="Lb1-sG-eAe" id="cMD-Kq-W4b"/>
+                        <outlet property="equationLbl" destination="LZX-FO-SpL" id="QLr-9f-wBL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="138.98050974512745"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="2Ag-Gr-ZEC">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="VKd-xn-f58" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8P-Z9-5st" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="141"/>
         </scene>
     </scenes>
     <resources>
