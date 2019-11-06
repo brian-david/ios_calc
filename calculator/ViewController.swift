@@ -10,7 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var numberOnScreen:Float = 0;
+    var numberOnScreen:Double = 0;
+    var firstNum:Double = 0;
+    var secondNum:Double = 0;
+    var ans:Double = 0;
+    var equals:Bool = false;
+    var operand:Bool = false;
+    var currentVal:Double = 0.0;
+    var action:String? = nil;
 
     @IBOutlet var ansLbl : UILabel!
     @IBOutlet var equationLbl : UILabel!
@@ -22,29 +29,63 @@ class ViewController: UIViewController {
 
     @IBAction func btnPress(sender: RoundButton){
         if sender.tag > 0 && sender.tag <= 9{
-            ansLbl.text = ansLbl.text! + String(sender.tag)
+            if (currentVal == 0){
+                currentVal = Double(sender.tag)
+                ansLbl.text = ansLbl.text! + String(sender.tag)
+            }
+            else{
+                firstNum = currentVal
+                currentVal = Double(sender.tag)
+                ansLbl.text =  String(sender.tag)
+                equationLbl.text = String(firstNum)+action!+String(currentVal)
+            }
         }
-        numberOnScreen = Float(ansLbl.text!)!
     }
     
     @IBAction func operands(_ sender: RoundButton) {
-        if ansLbl.text != "" && sender.tag != 15{
+        if (sender.tag != 15){
             switch sender.tag{
             case 11:
                 ansLbl.text = "x"
-                case 12:
+                action = "X"
+                ansLbl.text =  String(firstNum)
+            case 12:
                 ansLbl.text = "÷"
-                case 13:
+                action = "÷"
+                ansLbl.text =  String(firstNum)
+            case 13:
                 ansLbl.text = "+"
-                case 14:
+                action = "+"
+                ansLbl.text =  String(firstNum)
+            case 14:
                 ansLbl.text = "-"
-                case 15:
+                action = "-"
+                ansLbl.text =  String(firstNum)
+            case 15:
                 ansLbl.text = "="
+                action = "="
+                ansLbl.text = String(firstNum)+action!+String(currentVal)
+            default:
+                ansLbl.text = ""
+            }
+        }
+        
+        if (sender.tag == 15){
+            switch action {
+            case "X":
+                ansLbl.text = String(firstNum * currentVal)
+            case "÷":
+                ansLbl.text = String(firstNum / currentVal)
+            case "+":
+                ansLbl.text = String(firstNum + currentVal)
+            case "-":
+                ansLbl.text = String(firstNum - currentVal)
             default:
                 ansLbl.text = ""
             }
         }
     }
-    
 }
 
+//while not = pressed keep adding things to the calculation stack
+//if the float is .00 then round to the nearest whole
