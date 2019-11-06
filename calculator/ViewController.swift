@@ -10,16 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var numberOnScreen:Double = 0;
-    var firstNum:Double = 0;
-    var secondNum:Double = 0;
-    var ans:Double = 0;
-    var equals:Bool = false;
-    var operand:Bool = false;
-    var currentVal:Double = 0.0;
-    var action:String? = nil;
+    var numberOnScreen:Double = 0
+    var firstNum:Double = 0
+    var doingMaths = false
+    var operand = 0;
+    
 
-    @IBOutlet var ansLbl : UILabel!
+    @IBOutlet weak var ansLbl : UILabel!
     @IBOutlet var equationLbl : UILabel!
     
     override func viewDidLoad() {
@@ -27,62 +24,97 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func btnPress(sender: RoundButton){
-        if sender.tag > 0 && sender.tag <= 9{
-            if (currentVal == 0){
-                currentVal = Double(sender.tag)
-                ansLbl.text = ansLbl.text! + String(sender.tag)
-            }
-            else{
-                firstNum = currentVal
-                currentVal = Double(sender.tag)
-                ansLbl.text =  String(sender.tag)
-                equationLbl.text = String(firstNum)+action!+String(currentVal)
-            }
+    @IBAction func numberPress(sender: RoundButton){
+        if doingMaths == true{
+            ansLbl.text = String(sender.tag)
+            numberOnScreen = Double(ansLbl.text!)!
+            doingMaths = false
+        }else{
+            ansLbl.text = ansLbl.text! + String(sender.tag)
+            numberOnScreen = Double(ansLbl.text!)!
         }
     }
     
-    @IBAction func operands(_ sender: RoundButton) {
-        if (sender.tag != 15){
-            switch sender.tag{
-            case 11:
-                ansLbl.text = "x"
-                action = "X"
-                ansLbl.text =  String(firstNum)
-            case 12:
-                ansLbl.text = "÷"
-                action = "÷"
-                ansLbl.text =  String(firstNum)
-            case 13:
-                ansLbl.text = "+"
-                action = "+"
-                ansLbl.text =  String(firstNum)
-            case 14:
-                ansLbl.text = "-"
-                action = "-"
-                ansLbl.text =  String(firstNum)
-            case 15:
-                ansLbl.text = "="
-                action = "="
-                ansLbl.text = String(firstNum)+action!+String(currentVal)
-            default:
+    @IBAction func operatorPress(_ sender: RoundButton) {
+       //check that there is a number input and check that it is actually an operator button
+        if ansLbl.text != "" && sender.tag < 15 && sender.tag > 10{
+            operand = sender.tag
+            firstNum = Double(ansLbl.text!)!
+            doingMaths = true
+            //Find what button was pressed
+            switch (sender.tag){
+            case 11: //multiply
+                equationLbl.text = String(numberOnScreen)+" x "
+                print("multiply")
                 ansLbl.text = ""
+                break;
+            case 12: //divide
+                equationLbl.text = String(numberOnScreen)+" ÷ "
+                ansLbl.text = ""
+                break;
+            case 13: //add
+                equationLbl.text = String(numberOnScreen)+" + "
+                ansLbl.text = ""
+                break;
+            case 14: //minus
+                equationLbl.text = String(numberOnScreen)+" - "
+                ansLbl.text = ""
+                break;
+            default: break
             }
         }
         
-        if (sender.tag == 15){
-            switch action {
-            case "X":
-                ansLbl.text = String(firstNum * currentVal)
-            case "÷":
-                ansLbl.text = String(firstNum / currentVal)
-            case "+":
-                ansLbl.text = String(firstNum + currentVal)
-            case "-":
-                ansLbl.text = String(firstNum - currentVal)
-            default:
-                ansLbl.text = ""
+        //IF THE BUTTON PRESSED IS =
+        else if sender.tag == 15{
+            print(operand)
+            print("FIRST NUM -> "+String(firstNum))
+            print(numberOnScreen)
+            switch(operand){
+                case 11:
+                    equationLbl.text = String(firstNum)+" x "+String(numberOnScreen)
+                    ansLbl.text = String(firstNum * numberOnScreen)
+                    numberOnScreen = Double(ansLbl.text!)!
+                    break
+                case 12:
+                    equationLbl.text = String(firstNum)+" ÷ "+String(numberOnScreen)
+                    ansLbl.text = String(firstNum / numberOnScreen)
+                    numberOnScreen = Double(ansLbl.text!)!
+                    break;
+                case 13:
+                    equationLbl.text = String(firstNum)+" + "+String(numberOnScreen)
+                    ansLbl.text = String(firstNum + numberOnScreen)
+                    numberOnScreen = Double(ansLbl.text!)!
+                    break;
+                case 14:
+                    equationLbl.text = String(firstNum)+" - "+String(numberOnScreen)
+                    ansLbl.text = String(firstNum - numberOnScreen)
+                    numberOnScreen = Double(ansLbl.text!)!
+                    break;
+                default: break
             }
+        }
+        else if (sender.tag == -3){
+            equationLbl.text = ""
+            ansLbl.text = ""
+            firstNum = 0;
+            numberOnScreen = 0;
+            operand = 0;
+        }
+    }
+    
+    @IBAction func memoryFunctions(_ sender: RoundButton){
+        if (sender.tag == -4){ //MEMORY CLEAR
+            let dictionary = UserDefaults.standard.dictionaryRepresentation()
+            dictionary.keys.forEach{key in
+                UserDefaults.standard.removeObject(forKey: "memory")
+            }
+        }else if (sender.tag == -5){ //MEMORY RECALL
+            if let memAns = UserDefaults.standard.string(forKey: "memory"){
+                print(memAns)
+                ansLbl.text = memAns
+            }
+        }else if (sender.tag == -6){ //MEMORY SAVE
+            UserDefaults.standard.set(ansLbl.text, forKey: "memory")
         }
     }
 }
