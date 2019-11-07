@@ -430,7 +430,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="delete.right" catalog="system" width="64" height="52"/>
+        <image name="delete.right" catalog="system" width="32" height="32"/>
         <image name="divide" catalog="system" width="64" height="50"/>
         <image name="equal" catalog="system" width="64" height="36"/>
         <image name="minus" catalog="system" width="64" height="12"/>

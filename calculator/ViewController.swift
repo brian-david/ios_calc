@@ -69,6 +69,7 @@ class ViewController: UIViewController {
             print(operand)
             print("FIRST NUM -> "+String(firstNum))
             print(numberOnScreen)
+            doingMaths = false
             switch(operand){
                 case 11:
                     equationLbl.text = String(firstNum)+" x "+String(numberOnScreen)
@@ -112,6 +113,7 @@ class ViewController: UIViewController {
             if let memAns = UserDefaults.standard.string(forKey: "memory"){
                 print(memAns)
                 ansLbl.text = memAns
+                numberOnScreen = Double(memAns)!
             }
         }else if (sender.tag == -6){ //MEMORY SAVE
             UserDefaults.standard.set(ansLbl.text, forKey: "memory")
